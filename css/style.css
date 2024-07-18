@@ -1,0 +1,129 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color-1);
+}
+
+a:hover, button:hover{
+    cursor: pointer;
+}
+
+/* Variables */
+:root{
+
+    /* colores */
+    --color-1: #F8EDE3;
+    --color-2: #DFD3C3;
+    --color-3: #D0B8A8;
+    --color-4: #8D493A;
+
+    /* Colores de fuente */
+    --font-color-1: #1a0702;
+    --font-color-2: #ece8e3;
+
+    
+    /* Tamaño texto */
+    --fs-1: 1rem;
+    --fs-2: 1.5rem;
+    --fs-3: 2rem;
+    --fs-4: 3rem;
+    --fs-5: 4rem;
+    
+
+    /* tipografia */
+    --font-1: "Open Sans", sans-serif;
+
+    /* gradientes */
+    --grad-1: linear-gradient( 90.5deg,  rgba(152,45,255,1) 0.7%, rgba(90,241,255,1) 51.5%, rgba(65,239,164,1) 100.6% );
+}
+
+/* animaciones */
+@keyframes slideIn {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+/* Body */
+body{
+    font-family: var(--font-1);
+    background: var(--grad-1);
+    color: var(--font-color-1);
+    min-height: 100vh;
+}
+
+/* Header */
+header{
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 150px;
+    background: var(--color-1);
+    border-radius: 0 0 50% 50%;
+    box-shadow: var(--color-4) 0 0 5px;
+}
+
+.logo{
+    width: 130px;
+}
+
+.header-title{
+    font-size: var(--fs-4);
+    font-weight: 700;
+    text-shadow: white 0 0 5px;
+    animation: slideIn 1s;
+}
+
+/* Main */
+.cards-template{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 24px;
+}
+
+.card{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 300px;
+    height: 400px;
+    background: var(--color-3);
+    border-radius: 10px 10px 0 0;
+
+}
+
+
+.card-image{
+    width: 300px;
+    height: 300px;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 5%;
+    padding: 20 0 0;
+}
+
+
+/* Media Queries */
